@@ -1,0 +1,410 @@
+BIP Board: 0x00000000
+Reset by: p
+DM36x initialization passed!
+TI UBL Version: 1.50
+Booting Catalog Boot Loader
+BootMode = NAND
+Starting NAND Copy...
+Valid magicnum, 0xA1ACED66, found in block 0x00000019.
+   DONE
+Jumping to entry point at 0x81080000.
+
+
+U-Boot 2010.06 (Jul 10 2012 - 09:55:50) Basler IPCam
+
+DRAM:  256 MiB
+NAND:  64 MiB
+Using default environment
+
+BIP Reset Type: p
+BIP Board ID: 0x00
+Bad block table found at page 131040, version 0x01
+Bad block table found at page 131008, version 0x01
+nand_read_bbt: Bad block at 0x000002008000
+nand_read_bbt: Bad block at 0x00000342c000
+BIP S/N: 21146346
+BIP MAC: 00:30:53:11:7d:ea
+BIP UBL/U-Boot Version: 79a1fde_2411e4f
+Net:   Ethernet PHY: GENERIC @ 0x00
+
+Hit any key to stop autoboot:  0
+BIP_SERIAL=21146346
+Creating 1 MTD partitions on "nand0":
+0x000000220000-0x000003ff0000 : "mtd=6"
+UBI: attaching mtd1 to ubi0
+UBI: physical eraseblock size:   16384 bytes (16 KiB)
+UBI: logical eraseblock size:    15360 bytes
+UBI: smallest flash I/O unit:    512
+UBI: VID header offset:          512 (aligned 512)
+UBI: data offset:                1024
+UBI warning: ubi_eba_init_scan: cannot reserve enough PEBs for bad PEB handling, reserved 26, need 39
+UBI: attached mtd1 to ubi0
+UBI: MTD device name:            "mtd=6"
+UBI: MTD device size:            61 MiB
+UBI: number of good PEBs:        3954
+UBI: number of bad PEBs:         2
+UBI: max. allowed volumes:       89
+UBI: wear-leveling threshold:    4096
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     3
+UBI: available PEBs:             0
+UBI: total number of reserved PEBs: 3954
+UBI: number of PEBs reserved for bad PEB handling: 26
+UBI: max/mean erase counter: 3/0
+UBIFS: mounted UBI device 0, volume 1, name "usr"
+UBIFS: mounted read-only
+UBIFS: file system size:   49413120 bytes (48255 KiB, 47 MiB, 3217 LEBs)
+UBIFS: journal size:       6466560 bytes (6315 KiB, 6 MiB, 421 LEBs)
+UBIFS: media format:       w4/r0 (latest is w4/r0)
+UBIFS: default compressor: LZO
+UBIFS: reserved for root:  0 bytes (0 KiB)
+boot/105901/uboot.scr not found!
+Loading file 'boot/uImage' to addr 0x88000000 with size 5251224 (0x00502098)...
+Done
+## Booting kernel from Legacy Image at 88000000 ...
+   Image Name:   Linux-2.6.32-rc2-davinci1
+   Created:      2012-07-10   8:03:04 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    5251160 Bytes = 5 MiB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux........................................................................................................................................................................................................................................................................................................................................................................ done, booting the kernel.
+Linux version 2.6.32-rc2-davinci1 (jenkins@rd-ipcam) (gcc version 4.4.2 (GCC) ) #2 Tue Jul 10 10:02:57 CEST 2012
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00053177
+CPU: VIVT data cache, VIVT instruction cache
+Machine: DaVinci DM368 BIP
+Memory policy: ECC disabled, Data cache writeback
+DaVinci dm365_rev1.2 variant 0x8
+Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 16256
+Kernel command line: console=ttyS0,115200n8 bip.rstype=p bip.boardid=0x00 bip.resetbutton=0 bip.bootver=79a1fde_2411e4f emac.mac=00:30:53:11:7d:ea dm365_imp.oper_mode=1 mem=64M ubi.mtd=ubi
+Unknown boot option `bip.rstype=p': ignoring
+BIP BoardID: 0x00 => 0x00 (corrected)
+Unknown boot option `bip.resetbutton=0': ignoring
+Unknown boot option `bip.bootver=79a1fde_2411e4f': ignoring
+EMAC MAC: 00:30:53:11:7d:ea => 00:30:53:11:7d:ea
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 64MB = 64MB total
+Memory: 53252KB available (3152K code, 372K data, 8096K init, 0K highmem)
+SLUB: Genslabs=11, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS:245
+Console: colour dummy device 80x30
+Calibrating delay loop... 215.44 BogoMIPS (lpj=1077248)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+DaVinci: 8 gpio irqs
+NET: Registered protocol family 16
+davinci_serial_init:97: failed to get UART2 clock
+bio: create slab <bio-0> at 0
+DM365 IPIPE initialized in Single Shot mode
+vpss vpss: dm365_vpss vpss probed
+vpss vpss: dm365_vpss vpss probe success
+dm365_afew_hw_init
+Switching to clocksource timer0_1
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 1, 8192 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP reno registered
+Switched to NOHz mode on CPU #0
+NET: Registered protocol family 1
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+msgmni has been set to 104
+alg: No test for stdrng (krng)
+io scheduler noop registered
+io scheduler cfq registered (default)
+DM365 IPIPEIF probed
+imp serializer initialized
+davinci_previewer initialized
+davinci_resizer initialized
+Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+serial8250.0: ttyS0 at MMIO 0x1c20000 (irq = 40) is a 16550A
+console [ttyS0] enabled
+serial8250.0: ttyS1 at MMIO 0x1d06000 (irq = 41) is a 16550A
+loop: module loaded
+NAND device: Manufacturer ID: 0x20, Chip ID: 0x36 (ST Micro NAND 64MiB 1,8V 8-bit)
+Creating 9 MTD partitions on "davinci_nand.0":
+0x000000000000-0x000000004000 : "block0"
+0x000000004000-0x000000064000 : "ubl_desc"
+0x000000064000-0x0000000cc000 : "uboot_desc"
+0x0000000cc000-0x0000000f0000 : "ubl_code"
+0x0000000f0000-0x0000001e0000 : "uboot_code"
+0x0000001e0000-0x000000220000 : "env"
+0x000000220000-0x000003ff0000 : "ubi"
+0x000003ff0000-0x000004000000 : "bbt"
+0x000000004000-0x000003ff0000 : "complete"
+davinci_nand davinci_nand.0: controller rev. 2.3
+UBI: attaching mtd6 to ubi0
+UBI: physical eraseblock size:   16384 bytes (16 KiB)
+UBI: logical eraseblock size:    15360 bytes
+UBI: smallest flash I/O unit:    512
+UBI: VID header offset:          512 (aligned 512)
+UBI: data offset:                1024
+UBI warning: ubi_eba_init_scan: cannot reserve enough PEBs for bad PEB handling, reserved 26, need 39
+UBI: attached mtd6 to ubi0
+UBI: MTD device name:            "ubi"
+UBI: MTD device size:            61 MiB
+UBI: number of good PEBs:        3954
+UBI: number of bad PEBs:         2
+UBI: max. allowed volumes:       89
+UBI: wear-leveling threshold:    4096
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     3
+UBI: available PEBs:             0
+UBI: total number of reserved PEBs: 3954
+UBI: number of PEBs reserved for bad PEB handling: 26
+UBI: max/mean erase counter: 3/0
+UBI: image sequence number: 0
+UBI: background thread "ubi_bgt0d" started, PID 326
+spi_davinci spi_davinci.1: Controller at 0xfbc66800
+spi_davinci spi_davinci.1: Operating in interrupt mode using IRQ 42
+mice: PS/2 mouse device common for all mice
+rtc-rs5c372 1-0032: Time invalid: power lost
+rtc-rs5c372 1-0032: Time invalid: returning epoch
+rtc-rs5c372 1-0032: r2025sd found, 24hr, driver version 0.6
+rtc-rs5c372 1-0032: rtc core: registered rtc-rs5c372 as rtc0
+Linux video capture interface: v2.00
+vpfe_init
+vpfe-capture: vpss clock vpss_master enabled
+vpfe-capture vpfe-capture: v4l2 device registered
+vpfe-capture vpfe-capture: video device registered
+vpfe-capture vpfe-capture: v4l2 sub device bip-frontend registered
+vpfe_register_ccdc_device: DM365 ISIF
+DM365 ISIF is registered with vpfe.
+af major#: 250, minor# 0
+AF Driver initialized
+aew major#: 249, minor# 0
+AEW Driver initialized
+watchdog watchdog: heartbeat 60 sec
+Advanced Linux Sound Architecture Driver Version 1.0.21.
+ALSA device list:
+  No soundcards found.
+TCP cubic registered
+NET: Registered protocol family 17
+Clocks: disable unused mmcsd0
+Clocks: disable unused mmcsd1
+Clocks: disable unused spi0
+Clocks: disable unused spi2
+Clocks: disable unused spi3
+Clocks: disable unused spi4
+Clocks: disable unused pwm0
+Clocks: disable unused pwm1
+Clocks: disable unused pwm2
+Clocks: disable unused pwm3
+Clocks: disable unused timer1
+Clocks: disable unused timer3
+Clocks: disable unused usb
+Clocks: disable unused emac
+Clocks: disable unused voice_codec
+Clocks: disable unused asp0
+Clocks: disable unused rto
+Clocks: disable unused mjcp
+emac-mii: probed
+rtc-rs5c372 1-0032: Time invalid: returning epoch
+rtc-rs5c372 1-0032: setting system clock to 1970-01-01 00:00:00 UTC (0)
+Freeing init memory: 8096K
+INIT: version 2.86 booting
+Please wait: booting...
+Starting udev
+Root filesystem already rw, not remounting
+Caching udev devnodes
+UBIFS: mounted UBI device 0, volume 1, name "usr"
+UBIFS: mounted read-only
+UBIFS: file system size:   49413120 bytes (48255 KiB, 47 MiB, 3217 LEBs)
+UBIFS: journal size:       6466560 bytes (6315 KiB, 6 MiB, 421 LEBs)
+UBIFS: media format:       w4/r0 (latest is w4/r0)
+UBIFS: default compressor: lzo
+UBIFS: reserved for root:  0 bytes (0 KiB)
+UBIFS: recovery needed
+UBIFS: recovery completed
+UBIFS: mounted UBI device 0, volume 0, name "settings"
+UBIFS: file system size:   1950720 bytes (1905 KiB, 1 MiB, 127 LEBs)
+UBIFS: journal size:       122881 bytes (120 KiB, 0 MiB, 6 LEBs)
+UBIFS: media format:       w4/r0 (latest is w4/r0)
+UBIFS: default compressor: lzo
+UBIFS: reserved for root:  92137 bytes (89 KiB)
+Starting syslogd/klogd: done
+S39init.basic: Reading data from /dev/mtd0...
+S39init.basic: Bootloader version: 79a1fde_2411e4f
+S39init.basic: BoardID: 0x00
+S39init.basic: Vendor: Geutebrueck
+S39init.basic: Model: TopBC-2188
+S39init.basic: ID: 5.02847
+S40init.dirs: Prepare directory structure...
+S40init.dirs: Setup camera runtime...
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/AdcInit.txt
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/CameraAppConfig.rc
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/Props.txt
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/SensorToXYZ
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/SystemConfig.rc
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/env.sh
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/fpga.rbf
+S40init.dirs: Runtime: /usr/lib/ipcam/105901/01/sysconfig.rc
+S40init.dirs: Keys: 'topline'
+eth0: attached PHY driver [Generic PHY] (mii_bus:phy_addr=1:00, id=7c0f1)
+S41init.network: setup network lo
+ip: RTNETLINK answers: File exists
+S41init.network: setup network eth0
+Set coalesce to 1500 usecs.
+S41init.network: enable coalesce on eth0
+Set coalesce to 1500 usecs.
+S41init.network: start: inetd
+Starting portmap daemon: portmap.
+S80init.bip-shm: create bip shared mem: bip-sharedmemory
+Collected errors:
+ * Could not lock /usr/lib/opkg/lock: Read-only file system
+S99init.wbserver: TODO: Set the correct realm for WbServer
+S99init.wbserver: Starting Whiteboard Daemon: WbServer
+PHY: 1:00 - Link is Up - 100/Full
+
+S00init.heartbeatd: Starting Heartbeat Daemon: heartbeatd
+[+    0.000007][00000][            ] ERROR: Cannot open '/mnt/local/HeartbeatConfig.rc'
+S02init.qos: Prepare. Will be started later by sysconfd.
+S02init.serial: Prepare. Will be started later by sysconfd.
+S02init.snmpd: Prepare. Will be started later by sysconfd.
+S02init.streaming: Prepare. Will be started later by sysconfd.
+S03init.sysconfd: Starting System Configuration Daemon: sysconfd
+Starting sysconfd
+rtc-rs5c372 1-0032: Time invalid: returning epoch
+ip_tables: (C) 2000-2006 Netfilter Core Team
+S03init.sysconfd: Update boot reason...
+Size for ESRB: 112 MiByte
+Size for CMEM: 80 MiByte
+Chunk extra lines: 2
+Grabber pools: 4x3846400
+Encoder input pools: 8x2880000
+H264 encoder output pools: 2x1440000
+JPEG encoder output pools: 2x2880512
+Preview encoder output pools: 1x2880512
+H264_uWidth: 1728
+H264_uHeight: 1392
+H264_Encoder buffer: 4x7216128
+MPEG4_uWidth: 1664
+MPEG4_uHeight: 1264
+MPEG4_Encoder buffer: 4x6334464
+TODO find out more about the unknown pools
+Total pool size: 82906368 / 79M, unused: 979712 / 0M
+Better starting point: 0x8b0ef300
+CMEM args: phys_start=0x8b000000 phys_end=0x90000000 pools=4x3846400,8x2880000,2x1440000,2x2880512,1x2880512,4x7216128,16x4096,8x8192,8x20480,12x57344,4x69632,4x131072,4x262144,4x30400,1x57344,264x4096 allowOverlap=1 phys_start_1=0x00001000 phys_end_1=0x00008000 pools_1=1x28672
+S04init.rbserver: Loading Ringbuffer Module: esrb
+esrb: using contiguous memory!
+esrb: physical 84000000 .. 8b000000
+esrb: driver 3.1 initialized.
+S06init.sdcardd: Starting SD Card Daemon: sdcardd
+S07init.alarm: Starting Alarm Daemon: alarmd
+cyclone spi1.0: firmware: requesting ipcam-fpga.rbf
+S10init.fpga: Link FPGA firmware...
+S10init.fpga: Load FPGA driver...
+Waiting for '/dev/cyclone' to come up...
+S10init.fpga: > Version: PLACE, HOLDER >
+S11init.cmem: Loading CMEM driver: /usr/lib/modules/cmemk.ko
+Size for ESRB: 112 MiByte
+Size for CMEM: 80 MiByte
+Chunk extra lines: 2
+Grabber pools: 4x3846400
+Encoder input pools: 8x2880000
+H264 encoder output pools: 2x1440000
+JPEG encoder output pools: 2x2880512
+Preview encoder output pools: 1x2880512
+H264_uWidth: 1728
+H264_uHeight: 1392
+H264_Encoder buffer: 4x7216128
+MPEG4_uWidth: 1664
+MPEG4_uHeight: 1264
+MPEG4_Encoder buffer: 4x6334464
+TODO find out more about the unknown pools
+Total pool size: 82906368 / 79M, unused: 979712 / 0M
+Better starting point: 0x8b0ef300
+CMEM args: phys_start=0x8b000000 phys_allocated heap buffer 0xd0000000 of size 0xde000
+end=0x90000000 pCMEM Range Overlaps Kernel Physical - allowing overlap
+ools=4x3846400,8CMEM phys_start (0x1000) overlaps kernel (0x80000000 -> 0x84000000)
+x2880000,2x14400cmemk initialized
+00,2x2880512,1x2880512,4x7216128,16x4096,8x8192,8x20480,12x57344,4x69632,4x131072,4x262144,4x30400,1x57344,264x4096 allowOverlap=1 phys_start_1=0x00001000 phys_end_1=0x00008000 pools_1=1x28672
+S11init.cmem: CMEM args: phys_start=0x8b000000 phys_end=0x90000000 pools=4x3846400,8x2880000,2x1440000,2x2880512,1x2880512,4x7216128,16x4096,8x8192,8x20480,12x57344,4x69632,4x131072,4x262144,4x30400,1x57344,264x4096 allowOverlap=1 phys_start_1=0x00001000 phys_end_1=0x00008000 pools_1=1x28672
+S12init.dm368modules: Loading module: /usr/lib/modules/dm365mmap.ko
+S12init.dm368modules: Loading module: /usr/lib/modules/edmak.ko
+irqk initialized
+S12init.dm368modules: Loading module: /usr/lib/modules/irqk.ko
+Stopping syslogd/klogd: stopped syslogd (pid 1161)
+stopped klogd (pid 1165)
+done
+Starting syslogd/klogd: done
+S97init.camera: Starting Camera Application: camera
+Starting camera app
+S98init.httpd: Prepare /home/httpd directory structure...
+S98init.httpd: Generating static content...
+S98init.httpd: Providing legacy links...
+[+    0.000007][00000][            ] Day/Night functionality enabled: true
+[+    0.011842][00000][            ] Fan functionality enabled: false
+[+    0.012531][00000][            ] Heater functionality enabled: false
+[+    0.013227][00000][            ] SDCard functionality enabled: false
+[+    0.013921][00000][            ] Audio functionality enabled: false
+[+    0.014613][00000][            ] Motor focus functionality enabled: false
+[+    0.015297][00000][            ] Invert Input Pins: false
+[+    0.015988][00000][            ] I/O Pins: 3
+[+    0.017872][00000][            ] Board ID: 0
+[+    0.018591][00000][            ] Max packet size for streaming: 500000
+[+    0.019293][00000][            ] Number of grabber buffers: 4
+[+    0.019989][00000][            ] Number of encoders: 4
+[+    0.020688][00000][            ] Number of encoder in buffers: 2
+[+    0.021508][00000][            ] Number of encoder out buffers: 2
+[+    0.022217][00000][            ] Size of grabber buffers: 3846400
+[+    0.022927][00000][            ] Size of encoder in buffers: 2880000
+[+    0.031452][00000][            ] Size of H264 encoder out buffers: 1440000
+[+    0.032172][00000][            ] Size of JPEG encoder out buffers: 2880512
+S98init.httpd: Build JS information...
+S98init.httpd: use custom 'main-logo.jpg'
+S98init.httpd: use custom 'title-logo.gif'
+S98init.httpd: use custom 'splash.gif'
+cyclone spi1.0: firmware: requesting ipcam-fpga.rbf
+S98init.httpd: use custom 'favicon.ico'
+[+    1.182395][00000][Brain       ] FPGA Version: bip2_1600c, F_1.50-0/1.50-6/E_2.45-0/2.45-0
+S98init.httpd: Starting web server...
+cat: can't open '/etc/inetd.d/httpd.conf': No such file or directory
+S99init.mhttp: Starting MDNS Daemon: mhttp
+Start Thread [1388] 'Background', Priority 0
+m/n = 10/50
+[+    2.473333][00000][Brain       ] Starting camera...
+Start Thread [1391] 'Encoder #1', Priority -4
+Start Thread [1392] 'Encoder #2', Priority -4
+Start Thread [1390] 'Encoder #0', Priority -4
+Start Thread [1393] 'Encoder #3', Priority -4
+Start Thread [1394] 'NerveCenter', Priority -4
+Start Thread [1395] 'H3A', Priority -4
+Start Thread [1396] 'AlarmHandler', Priority -1
+Start Thread [1397] 'MotionDetection', Priority -1
+Start Thread [1398] 'SharpnessMeasurement', Priority -4
+Start Thread [1399] 'SharpnessEvaluator', Priority -4
+Start Thread [1400] 'PreviewEncoder', Priority 12
+Start Thread [1401] 'Framedispatcher', Priority -2
+Start Thread [1402] 'Grabber', Priority -4
+Start Thread [1403] 'Sharpy', Priority -4
+Start Thread [1404] 'EncoderSink', Priority -2
+
+
+Mucross Linux by kernel concepts
+http://www.mucross.com
+mucross@kernelconcepts.de
+MuCross 1.0 Geutebrueck-21146346 console
+
+Created with Imagetool v1.0 Geutebrueck-21146346
+Image date: Tue Jul 10 10:02:27 CEST 2012
+ __                              _______ _______
+|__|.-----.----.---.-.--------. |_     _|_     _|
+|  ||  _  |  __|  _  |        |  _|   |_ _|   |_
+|__||   __|____|___._|__|__|__| |_______|_______|
+    |__|
+                                    Basler AG
+
+Geutebrueck-21146346 login:
